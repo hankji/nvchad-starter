@@ -13,6 +13,11 @@ opt.relativenumber = true
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.scrolloff = 5
+-- vim.o.cursorlineopt = "number,line"
+
+-- important!
+-- require("base46").toggle_transparency()
+
 vim.cmd "silent! command! NvCloseAllBuf lua require('nvchad_ui/tabufline').closeAllBufs('')"
 vim.cmd "silent! command! DapuiToggle lua require('dapui').toggle()"
 
