@@ -1,4 +1,4 @@
-require "nvchad.options"
+require("nvchad.options")
 
 local opt = vim.opt
 local g = vim.g
@@ -9,13 +9,13 @@ opt.relativenumber = true
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.scrolloff = 5
--- vim.o.cursorlineopt = "number,line"
+vim.o.cursorlineopt = "number,line"
 
 -- important!
--- require("base46").toggle_transparency()
+-- :lua require("base46").toggle_transparency()
 
-vim.cmd "silent! command! NvCloseAllBuf lua require('nvchad_ui/tabufline').closeAllBufs('')"
-vim.cmd "silent! command! DapuiToggle lua require('dapui').toggle()"
+vim.cmd("silent! command! NvCloseAllBuf lua require('nvchad_ui/tabufline').closeAllBufs('')")
+vim.cmd("silent! command! DapuiToggle lua require('dapui').toggle()")
 
 g.mapleader = ","
 -- need soft link from ~/config/nvim/snippets to snippets
