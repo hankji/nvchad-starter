@@ -47,6 +47,7 @@ M.mason = {
     -- go dev
     "gopls",
     "gofumpt",
+    "golangci-lint",
     -- "rust_analyzer", "pyright"
     "pyright",
 
