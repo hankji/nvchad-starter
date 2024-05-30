@@ -16,13 +16,22 @@ lspconfig.gopls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
-    ["gpls"] = {
-      ["gofumpt"] = true,
-      ["usePlaceholders"] = true,
-      ["codelenses"] = {
-        ["generate"] = true,
-        ["gc_details"] = true,
+    gopls = {
+      gofumpt = true,
+      usePlaceholders = true,
+      codelenses = {
+        generate = true,
+        gc_details = true,
       },
+      -- hints = {
+      --   assignVariableTypes = true,
+      --   compositeLiteralFields = true,
+      --   compositeLiteralTypes = true,
+      --   constantValues = true,
+      --   functionTypeParameters = true,
+      --   parameterNames = true,
+      --   rangeVariableTypes = true,
+      -- },
       semanticTokens = true,
     },
   },
