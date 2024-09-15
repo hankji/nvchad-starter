@@ -30,10 +30,10 @@ return {
     opts = overrides.treesitter,
   },
 
-	-- {
-	-- 	"nvim-tree/nvim-tree.lua",
-	-- 	opts = overrides.nvimtree,
-	-- },
+  -- {
+  -- 	"nvim-tree/nvim-tree.lua",
+  -- 	opts = overrides.nvimtree,
+  -- },
 
   {
     "williamboman/mason.nvim",
