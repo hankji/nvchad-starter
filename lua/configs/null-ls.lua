@@ -31,6 +31,7 @@ local sources = {
   with_diagnostics_code(b.diagnostics.tsc),
   with_diagnostics_code(b.diagnostics.selene),
   with_diagnostics_code(b.diagnostics.golangci_lint),
+  with_diagnostics_code(b.diagnostics.revive),
   with_diagnostics_code(b.diagnostics.shellcheck),
 
   -- code actions
