@@ -10,7 +10,6 @@ local with_diagnostics_code = function(builtin)
   }
 end
 
--- local rc = require "configs.null-ls-revive"
 local b = null_ls.builtins
 
 local sources = {
@@ -26,13 +25,12 @@ local sources = {
   b.formatting.goimports,
 
   -- diagnostics
+  with_diagnostics_code(b.diagnostics.golangci_lint),
   with_diagnostics_code(b.diagnostics.write_good),
   with_diagnostics_code(b.diagnostics.eslint_d),
   with_diagnostics_code(b.diagnostics.flake8),
   with_diagnostics_code(b.diagnostics.tsc),
   with_diagnostics_code(b.diagnostics.selene),
-  with_diagnostics_code(b.diagnostics.golangci_lint),
-  -- with_diagnostics_code(rc),
   with_diagnostics_code(b.diagnostics.shellcheck),
 
   -- code actions
