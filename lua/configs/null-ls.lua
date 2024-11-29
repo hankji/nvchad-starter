@@ -25,7 +25,9 @@ local sources = {
   b.formatting.goimports,
 
   -- diagnostics
-  with_diagnostics_code(b.diagnostics.golangci_lint),
+  with_diagnostics_code(b.diagnostics.golangci_lint.with {
+    timeout = 10000, -- 设置超时时间为 10 秒
+  }),
   with_diagnostics_code(b.diagnostics.write_good),
   with_diagnostics_code(b.diagnostics.eslint_d),
   with_diagnostics_code(b.diagnostics.flake8),
