@@ -9,11 +9,15 @@ M.base46 = {
   theme = "everforest",
   theme_toggle = { "everforest", "one_light" },
   transparency = false,
-  nvdash = { load_on_startup = true },
+}
+
+M.ui = {
   statusline = {
-    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
-    lsprogress_len = 15,
+    theme = "minimal", -- default/vscode/vscode_colored/minimal
+    separator_style = "round",
   },
 }
+
+M.nvdash = { load_on_startup = true }
 
 return M
