@@ -30,3 +30,8 @@ end, { desc = "   lsp formatting" })
 map("n", "<leader>of", function()
   vim.diagnostic.open_float()
 end, { desc = "floating diagnostic" })
+
+map("n", "<C-m>", function()
+  local options = vim.bo.ft == "NvimTree" and "nvimtree" or "default"
+  require("menu").open(options, {})
+end, { desc = "open menu" })
