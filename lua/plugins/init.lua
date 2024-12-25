@@ -184,6 +184,7 @@ return {
   },
   {
     "echasnovski/mini.align",
+    event = "VeryLazy",
     version = "*",
     config = function()
       require("mini.align").setup()
