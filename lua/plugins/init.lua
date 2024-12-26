@@ -1,12 +1,13 @@
 local overrides = require "configs.overrides"
 
 return {
-  {
-    "stevearc/conform.nvim",
-    config = function()
-      require "configs.conform"
-    end,
-  },
+  -- 与null-ls功能重复
+  -- {
+  --   "stevearc/conform.nvim",
+  --   config = function()
+  --     require "configs.conform"
+  --   end,
+  -- },
   {
     "neovim/nvim-lspconfig",
     dependencies = {
