@@ -50,6 +50,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter-context",
     dependencies = "nvim-treesitter/nvim-treesitter",
+    event = "BufReadPost",
     config = function()
       require "configs.treesitter-context"
     end,
@@ -58,6 +59,7 @@ return {
     "nvim-treesitter/nvim-treesitter-textobjects",
     -- after = "nvim-treesitter/nvim-treesitter",
     dependencies = "nvim-treesitter/nvim-treesitter",
+    event = "BufReadPost",
     config = function()
       require "configs.treesitter-textobjects"
     end,
