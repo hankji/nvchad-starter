@@ -38,6 +38,7 @@ dap.configurations.go = {
     request = "launch",
     args = get_args,
     program = "${file}",
+    outputMode = "remote",
   },
   {
     type = "delve",
@@ -45,6 +46,7 @@ dap.configurations.go = {
     request = "launch",
     args = get_args,
     program = "${relativeFileDirname}",
+    outputMode = "remote",
   },
   {
     type = "delve",
@@ -52,6 +54,7 @@ dap.configurations.go = {
     request = "attach",
     mode = "local",
     processId = filtered_pick_process,
+    outputMode = "remote",
   },
   {
     type = "delve",
@@ -60,6 +63,7 @@ dap.configurations.go = {
     mode = "test",
     args = get_args,
     program = "${file}",
+    outputMode = "remote",
   },
   -- works with go.mod packages and sub packages
   {
@@ -69,5 +73,6 @@ dap.configurations.go = {
     mode = "test",
     args = get_args,
     program = "./${relativeFileDirname}",
+    outputMode = "remote",
   },
 }
