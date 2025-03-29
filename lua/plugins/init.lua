@@ -197,6 +197,14 @@ return {
     end,
   },
   {
+    "echasnovski/mini.diff",
+    event = "VeryLazy",
+    version = "false",
+    config = function()
+      require("mini.diff").setup()
+    end,
+  },
+  {
     "mfussenegger/nvim-dap",
     config = function()
       require "configs.custom-dap"
@@ -230,6 +238,13 @@ return {
     event = "VeryLazy", -- Or `LspAttach`
     config = function()
       require("tiny-inline-diagnostic").setup()
+    end,
+  },
+  {
+    "akinsho/git-conflict.nvim",
+    tag = "*",
+    config = function()
+      require("git-conflict").setup()
     end,
   },
 }
