@@ -29,9 +29,9 @@ local sources = {
     timeout = 10000, -- 设置超时时间为 10 秒
   }),
   with_diagnostics_code(b.diagnostics.write_good),
-  with_diagnostics_code(b.diagnostics.eslint_d),
-  with_diagnostics_code(b.diagnostics.flake8),
-  with_diagnostics_code(b.diagnostics.tsc),
+  -- with_diagnostics_code(b.diagnostics.eslint_d),
+  -- with_diagnostics_code(b.diagnostics.flake8),
+  -- with_diagnostics_code(b.diagnostics.tsc),
   with_diagnostics_code(b.diagnostics.selene),
   with_diagnostics_code(b.diagnostics.shellcheck),
 
