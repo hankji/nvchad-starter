@@ -16,7 +16,7 @@ local sources = {
   -- formatting
   b.formatting.prettierd,
   b.formatting.shfmt.with { extra_args = { "-i", "4" } },
-  b.formatting.fixjson,
+  -- b.formatting.fixjson,
   b.formatting.black.with { extra_args = { "--fast" } },
   b.formatting.isort,
   b.formatting.stylua,
@@ -31,13 +31,13 @@ local sources = {
   with_diagnostics_code(b.diagnostics.write_good),
   -- with_diagnostics_code(b.diagnostics.eslint_d),
   -- with_diagnostics_code(b.diagnostics.flake8),
-  -- with_diagnostics_code(b.diagnostics.tsc),
+  with_diagnostics_code(b.diagnostics.codespell),
   with_diagnostics_code(b.diagnostics.selene),
-  with_diagnostics_code(b.diagnostics.shellcheck),
+  with_diagnostics_code(b.diagnostics.checkmake),
 
   -- code actions
   b.code_actions.gitsigns,
-  b.code_actions.eslint_d,
+  -- b.code_actions.eslint_d,
   b.code_actions.gitrebase,
   b.code_actions.refactoring,
 
@@ -47,7 +47,7 @@ local sources = {
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup {
-  debug = false,
+  debug = true,
   debounce = 150,
   save_after_format = true,
   sources = sources,
