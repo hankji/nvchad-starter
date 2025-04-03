@@ -47,7 +47,7 @@ local sources = {
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup {
-  debug = true,
+  debug = false,
   debounce = 150,
   save_after_format = true,
   sources = sources,
