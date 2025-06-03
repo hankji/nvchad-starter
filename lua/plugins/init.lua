@@ -200,7 +200,7 @@ return {
   {
     "echasnovski/mini.diff",
     event = "VeryLazy",
-    version = "false",
+    version = "*",
     config = function()
       require("mini.diff").setup()
     end,

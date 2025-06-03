@@ -8,6 +8,27 @@ dap.adapters.delve = {
   },
 }
 
+dap.adapters.go = function(callback, config)
+  local handle
+  local pid_or_err
+  local port = config.port or 2345
+
+  handle, pid_or_err = vim.loop.spawn("dlv", {
+    args = {
+      "connect",
+      "127.0.0.1:" .. port,
+    },
+    detached = true,
+  }, function(code)
+    handle:close()
+    print("Delve exited with exit code: " .. code)
+  end)
+
+  vim.defer_fn(function()
+    callback { type = "server", host = "127.0.0.1", port = port }
+  end, 100)
+end
+
 local get_args = function()
   -- 获取输入命令行参数
   local cmd_args = vim.fn.input "CommandLine Args:"
@@ -74,5 +95,13 @@ dap.configurations.go = {
     args = get_args,
     program = "./${relativeFileDirname}",
     outputMode = "remote",
+  },
+  {
+    type = "go",
+    name = "Attach Remote",
+    request = "attach",
+    mode = "remote",
+    port = 52345,
+    host = "127.0.0.1",
   },
 }
