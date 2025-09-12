@@ -190,7 +190,7 @@ return {
     keys = require("configs.flash_opt").keys,
   },
   {
-    "echasnovski/mini.align",
+    "nvim-mini/mini.align",
     event = "VeryLazy",
     version = "*",
     config = function()
@@ -198,7 +198,7 @@ return {
     end,
   },
   {
-    "echasnovski/mini.diff",
+    "nvim-mini/mini.diff",
     event = "VeryLazy",
     version = "*",
     config = function()
