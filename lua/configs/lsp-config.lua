@@ -1,6 +1,15 @@
 local on_attach = require("nvchad.configs.lspconfig").on_attach
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
+dofile(vim.g.base46_cache .. "lsp")
+require("nvchad.lsp").diagnostic_config()
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    on_attach(_, args.buf)
+  end,
+})
+
 -- if you just want default config for the servers then put them in a table
 local servers = { "pyright" }
 for _, lsp in ipairs(servers) do
@@ -9,6 +18,7 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   })
 end
+vim.lsp.enable(servers)
 
 vim.lsp.config("gopls", {
   on_attach = on_attach,
@@ -34,6 +44,7 @@ vim.lsp.config("gopls", {
     },
   },
 })
+vim.lsp.enable "gopls"
 
 --
 -- lspconfig.pyright.setup { blabla}
