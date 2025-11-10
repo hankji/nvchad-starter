@@ -254,4 +254,14 @@ return {
     ---@type quicker.SetupOptions
     opts = {},
   },
+  {
+    "soulis-1256/eagle.nvim",
+    event = "VeryLazy", -- Or `LspAttach`
+    config = function()
+      require("eagle").setup {
+        keyboard_mode = true,
+      }
+      vim.keymap.set("n", "K", ":EagleWin<CR>", { noremap = true, silent = true })
+    end,
+  },
 }
