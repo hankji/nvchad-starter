@@ -29,6 +29,7 @@ return {
   -- overrde plugin configs
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
     opts = overrides.treesitter,
   },
 
