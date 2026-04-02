@@ -260,6 +260,7 @@ return {
     event = "VeryLazy", -- Or `LspAttach`
     config = function()
       require("eagle").setup {
+        border = "rounded",
         keyboard_mode = true,
       }
       vim.keymap.set("n", "K", ":EagleWin<CR>", { noremap = true, silent = true })
