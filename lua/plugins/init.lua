@@ -61,6 +61,9 @@ return {
     "nvim-treesitter/nvim-treesitter-textobjects",
     -- after = "nvim-treesitter/nvim-treesitter",
     dependencies = "nvim-treesitter/nvim-treesitter",
+    init = function()
+      vim.g.no_plugin_maps = true
+    end,
     event = "BufReadPost",
     config = function()
       require "configs.treesitter-textobjects"
